@@ -1,7 +1,7 @@
 # This Repository is a Proof of concept in usin Salesforce LWC Framework with Base Components and SLDS
 
 ## Sample app:
-![Alt text](./image.png)
+![Sample app](./image.png)
 
 ## Project Setup
 
