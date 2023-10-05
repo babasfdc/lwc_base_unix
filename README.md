@@ -3,7 +3,7 @@
 
 ## Project Setup
 
-![Alt text](image.png)
+![Alt text](./image.png)
 
 The directory structure looks like this:
 
@@ -24,7 +24,6 @@ package.json            // npm packaging configuration
 
 ## Configuration
 
-The LWR server is configured in `lwr.config.json`, at the root of the project. The **LWC Boilerplate** example has one LWC module and one server-side route.
 
 ```json
 // Package.json
