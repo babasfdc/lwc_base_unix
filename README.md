@@ -3,7 +3,7 @@
 
 ## Project Setup
 
-![Alt text](./assets/images/welcome-mat/bg-info@2x.png)
+![Alt text](./image.png)
 
 The directory structure looks like this:
 
