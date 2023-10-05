@@ -78,7 +78,7 @@ $ npm install
 ## copy all slds assets to public/assets
 
 ```bash
-$ copyAssets
+$ npm run copyAssets
 ```
 ## compile all dependiency packages to public/app.js file using rollup.config.js file
 
