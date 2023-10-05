@@ -1,0 +1,96 @@
+<template>
+    <main>
+        <img src="./assets/images/welcome-mat/bg-info@2x.png" alt="logo" />        
+    </main>
+
+    <p id="action" class="slds-box slds-text-heading_small">Action icons represent actions a user can take. The default
+        size of action icons are larger than the others. <br /><br />
+        <lightning-icon class = "slds-m-left_x-small" icon-name="action:approval" alternative-text="Approved" title="Approved">
+            <!--<img src="./assets/icons/action/approval_60.png"  />-->
+        </lightning-icon>
+        <lightning-icon class = "slds-m-left_x-small" icon-name="action:delete" alternative-text="Delete" title="Delete"></lightning-icon>
+        <lightning-icon class = "slds-m-left_x-small" icon-name="action:new_note" alternative-text="New note" title="New note"></lightning-icon>
+        <lightning-icon class = "slds-m-left_x-small" icon-name="action:preview" alternative-text="Preview" title="Preview"></lightning-icon>
+    </p>
+
+
+
+    <lightning-button variant="base" label="Base" title="Looks like a link" onclick={handleClick} class="slds-m-left_x-small" ></lightning-button>
+
+    <!-- Neutral variant (default) -->
+    <lightning-button label="Neutral" title="Non-primary action" onclick={handleClick} class="slds-m-left_x-small" ></lightning-button>
+
+    <!-- Brand variant: Identifies the primary action in a group of buttons -->
+    <lightning-button variant="brand" label="Brand" title="Primary action" onclick={handleClick} class="slds-m-left_x-small" ></lightning-button>
+
+    <!-- Brand outline variant: Identifies the primary action in a group of buttons, but has a lighter look -->
+    <lightning-button variant="brand-outline" label="Brand Outline" title="Primary action with lighter look" onclick={handleClick} class="slds-m-left_x-small" ></lightning-button>
+
+    <!-- Destructive variant: Identifies a potentially negative action -->
+    <lightning-button variant="destructive" label="Destructive" title="Destructive action" onclick={handleClick} class="slds-m-left_x-small" ></lightning-button>
+
+    <!-- Destructive text variant: Identifies a potentially negative action, but has a lighter look -->
+    <lightning-button variant="destructive-text" label="Destructive Text" title="Destructive action with a lighter look" onclick={handleClick} class="slds-m-left_x-small"></lightning-button>
+
+    <!-- Success variant: Identifies a successful action -->
+    <lightning-button variant="success" label="Success" icon-name="utility:down" title="Successful action" onclick={handleClick} class="slds-m-left_x-small" ></lightning-button>
+
+    <lightning-button-menu>
+        <lightning-menu-item
+           prefix-icon-name="utility:user"
+           label="Menu item">
+       </lightning-menu-item>
+        <lightning-menu-item
+           label="Another menu item">
+       </lightning-menu-item>
+    </lightning-button-menu>
+  
+
+  <div class="slds-m-vertical_medium">
+    <p>
+      The label of the button that was clicked is:
+      <span class="slds-text-heading_small">{clickedButtonLabel}</span>
+    </p>
+  </div>
+
+  <lightning-avatar src="./assets/images/avatar1.jpg"></lightning-avatar>
+  <lightning-avatar size="x-small" src="./assets/images/avatar2.jpg" initials="JD" fallback-icon-name="standard:person_account" alternative-text="Jane Doe" class="slds-m-right_small"></lightning-avatar>
+    <lightning-avatar size="small"   src=".assets/images/avatar3.jpg" initials="TP" fallback-icon-name="standard:person_account" alternative-text="Tony Price" class="slds-m-right_small"></lightning-avatar>
+    <lightning-avatar size="medium"  src=".assets/images/avatar1.jpg" initials="RE" fallback-icon-name="standard:person_account" alternative-text="Ryan Eddie" class="slds-m-right_small"></lightning-avatar>
+    <lightning-avatar size="large"   src="./assets/images/avatar2.jpg" initials="CR" fallback-icon-name="standard:person_account" alternative-text="Cindy Rice" class="slds-m-right_small"></lightning-avatar>
+
+   
+
+
+
+     
+
+        <!-- Badge: basic -->
+        
+
+       
+        <lightning-badge label="Alpha" icon-name="standard:event"></lightning-badge>
+        <lightning-badge label="Beta" icon-name="standard:email" icon-position="end"></lightning-badge>
+        <lightning-badge label="Gamma" icon-name="custom:custom11"></lightning-badge>    
+
+        <h1>badge-complete</h1>
+
+         
+  <!--
+
+
+  <lightning-datatable
+  key-field="id"
+  columns={columns}
+  data={data}
+  hide-checkbox-column
+  default-sort-direction={defaultSortDirection}
+  sorted-direction={sortDirection}
+  sorted-by={sortedBy}
+  onsort={onHandleSort}>
+</lightning-datatable>
+
+  -->
+
+
+</template>

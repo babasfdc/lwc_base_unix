@@ -1,0 +1,41 @@
+{
+  "name": "lwc_base_unix",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  
+  "scripts": {
+    "clean": "rm -rf node_modules __lwr_cache__ site",
+    "dev": "lwr dev",
+    "dev:compat": "lwr dev --mode compat",
+    "build": "lwr build --clean",
+    "build:prod-compat": "lwr build --clean --mode prod-compat",
+    "start": "lwr start",
+    "stage": "yarn build && yarn start",
+    "stage:prod-compat": "yarn build:prod-compat && yarn start",
+    "copyAssets": "node scripts/copyAssets.js"
+  },
+  "dependencies": {
+    "@lwc/compiler": "1.7.7",
+    "@lwc/engine": "1.7.7",
+    "@lwc/rollup-plugin": "1.7.7",
+    "@lwc/synthetic-shadow": "1.7.7",
+    "@lwc/wire-service": "1.7.7",
+    "@salesforce-ux/design-system": "^2.12.2",
+    "express": "4.17.1",
+    "lightning-base-components": "1.8.1-alpha",
+    "lwc": "2.38.1",
+    "lwr": "0.9.4",
+    "rollup": "2.21.0",
+    "rollup-plugin-replace": "2.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "volta": {
+    "node": "18.16.1"
+  },
+    "devDependencies": {
+    "fs-extra": "^11.1.1"
+  }
+}

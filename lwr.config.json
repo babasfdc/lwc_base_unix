@@ -1,0 +1,24 @@
+{
+    "lwc": { "modules": [{ "dir": "$rootDir/src/modules" },
+                        {"npm": "@salesforce-ux/design-system"},
+                        {"npm": "lightning-base-components"}] },
+    "routes": [
+        {
+            "id": "example",
+            "path": "/",
+            "rootComponent": "example/app"
+        }
+    ],
+    "assets": [
+        {
+            "alias": "assetsDir",
+            "dir": "$rootDir/public/assets",
+            "urlPath": "/public/assets"
+        },
+        {
+            "alias": "favicon",
+            "file": "$rootDir/src/assets/favicon.ico",
+            "urlPath": "/favicon.ico"
+        }
+    ]
+}
