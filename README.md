@@ -1,9 +1,9 @@
 # This Repository is a Proof of concept in usin Salesforce LWC Framework with Base Components and SLDS
 
+## Sample app:
+![Alt text](./image.png)
 
 ## Project Setup
-
-![Alt text](./image.png)
 
 The directory structure looks like this:
 
