@@ -1,8 +1,9 @@
-# LWC Boilerplate Example
+# This Repository is a Proof of concept in usinf Salesforce LWC Framework with Base Components and SLDS
 
-The **LWC Boilerplate** example contains the minimum code needed to get a simple Single Page Application (SPA) on LWR running.
 
 ## Project Setup
+
+![Alt text](image.png)
 
 The directory structure looks like this:
 
@@ -26,45 +27,75 @@ package.json            // npm packaging configuration
 The LWR server is configured in `lwr.config.json`, at the root of the project. The **LWC Boilerplate** example has one LWC module and one server-side route.
 
 ```json
-// lwr.config.json
+// Package.json
 {
-    "lwc": { "modules": [{ "dir": "$rootDir/src/modules" }] },
-    "routes": [
-        {
-            "id": "example",
-            "path": "/",
-            "rootComponent": "example/app"
-        }
-    ],
-    "assets": [
-        {
-            "alias": "assetsDir",
-            "dir": "$rootDir/src/assets",
-            "urlPath": "/public/assets"
-        },
-        {
-            "alias": "favicon",
-            "file": "$rootDir/src/assets/favicon.ico",
-            "urlPath": "/favicon.ico"
-        }
-    ]
+  "name": "lwc_base_unix",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  
+  "scripts": {
+    "clean": "rm -rf node_modules __lwr_cache__ site",
+    "dev": "lwr dev",
+    "dev:compat": "lwr dev --mode compat",
+    "build": "lwr build --clean",
+    "build:prod-compat": "lwr build --clean --mode prod-compat",
+    "start": "lwr start",
+    "stage": "yarn build && yarn start",
+    "stage:prod-compat": "yarn build:prod-compat && yarn start",
+    "copyAssets": "node scripts/copyAssets.js"
+  },
+  "dependencies": {
+    "@lwc/compiler": "1.7.7",
+    "@lwc/engine": "1.7.7",
+    "@lwc/rollup-plugin": "1.7.7",
+    "@lwc/synthetic-shadow": "1.7.7",
+    "@lwc/wire-service": "1.7.7",
+    "@salesforce-ux/design-system": "^2.12.2",
+    "express": "4.17.1",
+    "lightning-base-components": "1.8.1-alpha",
+    "lwc": "2.38.1",
+    "lwr": "0.9.4",
+    "rollup": "2.21.0",
+    "rollup-plugin-replace": "2.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "volta": {
+    "node": "18.16.1"
+  },
+    "devDependencies": {
+    "fs-extra": "^11.1.1"
+  }
 }
 ```
 
-## Running the Project in dev Mode
+## install dependency packages
 
 ```bash
-yarn install
-yarn dev # dev:compat for AMD format
+$ npm install
+```
+## copy all slds assets to public/assets
+
+```bash
+$ copyAssets
+```
+## compile all dependiency packages to public/app.js file using rollup.config.js file
+
+```bash
+$ rollup --config rollup.config.js
+```
+
+## start express server using src/server.js
+
+
+```bash
+$ node ./src/server.js
 ```
 
 Open the site at [http://localhost:3000](http://localhost:3000)
 
-## Statically Generate and Preview the Site
+## Welcome to the LWC single page app using LWC and SLDS
 
-```bash
-yarn build # dev:prod-compat for AMD format
-yarn start
-```
 
-Open the site at [http://localhost:3000](http://localhost:3000)
