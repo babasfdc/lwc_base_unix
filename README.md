@@ -1,4 +1,4 @@
-# This Repository is a Proof of concept in usinf Salesforce LWC Framework with Base Components and SLDS
+# This Repository is a Proof of concept in usin Salesforce LWC Framework with Base Components and SLDS
 
 
 ## Project Setup
